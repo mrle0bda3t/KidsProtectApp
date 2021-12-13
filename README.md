@@ -1,5 +1,5 @@
 # SoftCon2021
-Project of team MSEC_LQĐ
+Project of Softcon2021
 
 ## What did we do? 
  - Building application to help parents managing kids's activities in the internet
