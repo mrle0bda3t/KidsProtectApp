@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp50"
+    android:layout_marginStart="@dimen/dp12"
+    android:layout_marginTop="@dimen/dp8"
+    android:layout_marginEnd="@dimen/dp12"
+    android:layout_marginBottom="@dimen/dp4"
+    app:cardCornerRadius="@dimen/dp8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutItemBlApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgApp"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_margin="@dimen/dp12"
+            android:src="@drawable/youtube"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameApp"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp8"
+            android:text="@string/app_name"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imgApp"
+            app:layout_constraintRight_toLeftOf="@id/time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintRight_toLeftOf="@id/swApp">
+
+            <View
+                android:layout_width="@dimen/dp8"
+                android:layout_height="match_parent"
+                android:background="@color/bl"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/timeStart" />
+
+            <TextView
+                android:id="@+id/timeStart"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingRight="@dimen/dp24"
+                android:text="@string/app_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timeStop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeStop"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingRight="@dimen/dp24"
+                android:text="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timeStart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Switch
+            android:id="@+id/swApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

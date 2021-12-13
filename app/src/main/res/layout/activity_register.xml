@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/boxInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/raleway_black"
+                android:text="Tạo tài khoản người bảo hộ"
+                android:textColor="#656565"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/tenDangNhap"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext"
+                android:hint="Tên đăng nhập"
+                android:inputType="textPersonName"
+                android:paddingLeft="22.5dp"
+                android:selectAllOnFocus="true" />
+
+            <EditText
+                android:id="@+id/matKhau"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext"
+                android:hint="Mật khẩu"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingLeft="22.5dp"
+                android:selectAllOnFocus="true" />
+
+
+            <EditText
+                android:id="@+id/nhapLaiPass"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext"
+                android:hint="Nhập lại mật khẩu"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingLeft="22.5dp"
+                android:selectAllOnFocus="true" />
+
+
+            <EditText
+                android:id="@+id/sdt"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext"
+                android:hint="Số điện thoại"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:paddingLeft="22.5dp"
+                android:selectAllOnFocus="true" />
+
+
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext"
+                android:hint="Email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="22.5dp"
+                android:selectAllOnFocus="true"
+                app:layout_constraintTop_toBottomOf="@+id/nhapLaiPass" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dangKy"
+            android:layout_width="250dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rettangolo_27_2"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mess" />
+
+        <TextView
+            android:id="@+id/btnDangNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/login"
+            app:layout_constraintBottom_toTopOf="@id/dangKy"
+            app:layout_constraintLeft_toLeftOf="@id/dangKy"
+            app:layout_constraintRight_toRightOf="@id/dangKy" />
+
+        <TextView
+            android:id="@+id/mess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:textColor="@color/red"
+            app:layout_constraintLeft_toLeftOf="@id/boxInput"
+            app:layout_constraintTop_toBottomOf="@id/boxInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

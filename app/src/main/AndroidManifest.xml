@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.loan555.kisdapplication2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".Kidsapp.ApplicationEx"
+        android:allowBackup="true"
+        android:cantSaveState="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KisdApplication2"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.activity.NotificationActivity"
+            android:configChanges="screenSize|orientation|keyboard"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".ui.activity.AccountActivity"
+            android:exported="true" />
+        <activity android:name=".Kidsapp.ActivityPro" />
+        <activity
+            android:name=".Kidsapp.ActivityMain"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".JavaCode.ActivityApplyBl" />
+        <activity android:name=".JavaCode.ActivityKid" />
+        <activity android:name=".JavaCode.ActivityAddUrl" />
+        <activity android:name=".JavaCode.ActivityAddBlackList" />
+        <activity android:name=".JavaCode.ActivityBlockurl" />
+        <activity android:name=".JavaCode.ActivityBlacklist" />
+        <activity
+            android:name=".ui.activity.DetailActivity"
+            android:label=""
+            android:parentActivityName=".ui.activity.MainActivity" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="screenSize|orientation|keyboard"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="Đăng nhập"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:parentActivityName=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.TaoTaiKhoanTreEmActivity" />
+
+        <service
+            android:name=".Kidsapp.connection.ServiceSinkhole"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Kidsapp.widget.ReceiverAutostart"
+            android:label="@string/app_name">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Kidsapp.widget.WidgetMain"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetmain" />
+        </receiver>
+        <receiver
+            android:name=".Kidsapp.widget.WidgetLockdown"
+            android:label="@string/setting_lockdown">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetlockdown" />
+        </receiver>
+        <receiver
+            android:name=".Kidsapp.widget.WidgetAdmin"
+            android:label="@string/app_name"
+            android:permission="com.example.kidsprotect.permission.ADMIN">
+            <intent-filter>
+                <action android:name="com.example.kidsprotect.ON" />
+                <action android:name="com.example.kidsprotect.OFF" />
+                <action android:name="com.example.kidsprotect.LOCKDOWN_ON" />
+                <action android:name="com.example.kidsprotect.LOCKDOWN_OFF" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Kidsapp.connection.AlarmReceiver"/>
+    </application>
+
+</manifest>

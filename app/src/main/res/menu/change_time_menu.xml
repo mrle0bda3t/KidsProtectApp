@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Thay đổi giờ bắt đầu" android:id="@+id/startTime"/>
+    <item android:title="Thay đổi giờ kết thúc" android:id="@+id/endTime" />
+    <item android:title="Đặt chặn cả ngày" android:id="@+id/allDay" />
+</menu>

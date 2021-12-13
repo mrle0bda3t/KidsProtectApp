@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.LoginActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.loan555.kisdapplication2.viewmodel.ApiTaiKhoanViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tite1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/raleway_black"
+                android:text="KA"
+                android:textColor="#2b2828"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline6"
+                app:layout_constraintRight_toRightOf="@id/guideline6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tite2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_light"
+                android:text="Vì tương lai của trẻ"
+                android:textColor="#171717"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline6"
+                app:layout_constraintRight_toRightOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/tite1" />
+
+            <TextView
+                android:id="@+id/tite3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/raleway_black"
+                android:text="Chào mừng!"
+                android:textColor="#656565"
+                android:textSize="22sp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline6"
+                app:layout_constraintRight_toRightOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/tite1" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/edittext"
+                android:hint="E-mail, phone or username"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="22.5dp"
+                app:layout_constraintBottom_toTopOf="@id/editTextTextPassword"
+                app:layout_constraintLeft_toLeftOf="@id/guideline6"
+                app:layout_constraintRight_toRightOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/tite3" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/edittext"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:paddingLeft="22.5dp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline6"
+                app:layout_constraintRight_toRightOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress" />
+
+            <TextView
+                android:id="@+id/btLogin"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/rettangolo_27_2"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="ĐĂNG NHẬP"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline6"
+                app:layout_constraintRight_toRightOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/mess" />
+
+            <TextView
+                android:id="@+id/mess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/editTextTextPassword" />
+
+            <TextView
+                android:id="@+id/btSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/lato"
+                android:text="Đăng ký"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="@id/btLogin"
+                app:layout_constraintTop_toBottomOf="@id/btLogin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>
